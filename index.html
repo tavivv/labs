@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            [4, 8, 2],
+            [1, 9, 3],
+            [5, 6, 0]];
+        for(let j = 0; j < arr.length; j++){
+        for(let i = 0; i < arr.length; i++){
+        if (arr[i] > arr[i+1]){
+            let temp = arr[0][i]
+            arr[0][i] = arr[0][i+1]
+            arr[0][i+1] = temp
+        }}}
+
+
+        for(let i = 0; i < 3; i++) {
+            console.log(arr[i])
+        }
+    </script>
+</body>
+</html>
