@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = attack>Атака</button>
+    <button id = block>Блок</button>
+    <button id = inning>Подача</button>
+    <button id = mistake>Ошибка</button>
+    <button id = change onclick = change()>Замена</button>
+    <script>
+        let team1 = ["1", "2", "3", "4", "5", "6"]
+        let team2 = ["1", "2", "3", "4", "5", "6"]
+        let number_team1 = 0
+        let number_team2 = 0
+        function attack(){
+            let player_attack = prompt("Введите номер игрока, который будет атаковать")
+        }
+        function block(){
+            let player_block = prompt("Введите номер игрока, который будет блокировать")
+        }
+        function inning(){
+            let player_block = prompt("Введите номер игрока, который будет подавать")
+        }
+        function mistake(){
+            let player_block = prompt("Введите номер игрока, который будет ошибаться")
+        }
+
+        function change(){
+            let change1 = prompt("Введите номер игрока кого вы хотите заменить") 
+            for(let j = 0; j <= team1.length; j++){
+            let temp = team1[j]
+            if(change1 == temp){
+                change2 = prompt("Введите номер игрока на кого вы хотите заменить") 
+                let replace = (arr, oldVal, newVal) => (arr[arr.indexOf(oldVal)] = newVal, arr)
+                console.log(replace(team1, temp, change2))
+                break}
+            else{ 
+            if(j == team1.length) alert("Такого игрока не существует")
+            }}}
+    </script>
+</body>
+</html>
